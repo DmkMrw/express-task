@@ -7,6 +7,11 @@
   {{#if isError}}
   <div class="isError">You can't leave fields empty!</div>
   {{/if}}
+  {{#if fileName}}
+  <div>
+    <img src='/images/uploads/{{fileName}}' />
+  </div>
+  {{/if}}
   <label>
     Your name: <input type="text" name="author">
   </label>
@@ -17,7 +22,7 @@
     Title: <input type="text" name="title">
   </label>
   <label>
-    Project design: <input type="file" name="file" accept="image/png, image/gif, image/jpeg, image/jpg">
+    Project design: <input type="file" name="image" accept="image/png, image/gif, image/jpeg, image/jpg">
   </label>
   <label>
     Message: <textarea name="message"></textarea>
